@@ -66,12 +66,11 @@ class _HomePageState extends State<HomePage> {
           ),
         ],
       ),
-      body: Padding(padding: EdgeInsets.all(20),
+      body: Padding(padding: EdgeInsets.symmetric(horizontal: 20),
       child: ListView.builder(
         itemBuilder: (context, index) {
-          
         return Container(
-        margin: EdgeInsets.only(bottom: 12),
+        margin: EdgeInsets.only(top: 12),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(12),
           border: Border.all(color: Colors.grey.shade300, width: 1),
