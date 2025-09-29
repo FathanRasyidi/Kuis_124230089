@@ -12,8 +12,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  
-
+  List<bool> bookmark = [false, false, false, false,false, false,false, false,false, false,false, false,false, false,false, false];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -70,7 +69,7 @@ class _HomePageState extends State<HomePage> {
       body: Padding(padding: EdgeInsets.all(20),
       child: ListView.builder(
         itemBuilder: (context, index) {
-          List<bool> bookmark = [false, false, false, false,false, false,false, false,false, false,false, false,false, false,false, false];
+          
         return Container(
         margin: EdgeInsets.only(bottom: 12),
         decoration: BoxDecoration(
@@ -124,7 +123,10 @@ class _HomePageState extends State<HomePage> {
             ],
           ),
           trailing: IconButton(onPressed: () {
+            bookmark[index] ?
             setState(() {
+              bookmark[index] = false;
+            }) : setState(() {
               bookmark[index] = true;
             });
           },
